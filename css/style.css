@@ -1,0 +1,920 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color: #90e3e6;
+    --textColor: rgb(221, 221, 221);
+    --background: #212121;
+}
+
+x{
+    background-color: #e0e0e0 #d13f3f #90e3e6 #68df72;
+    
+}
+
+   @font-face {
+       font-family: bebas;
+       src: url('../06-fonts/BebasNeueBook-d9A1l.ttf');
+   }
+   @font-face {
+       font-family: bebasbook;
+       src: url('../06-fonts/BebasNeueBook-d9A1l.ttf');
+   }
+   @font-face {
+       font-family: bebasbold;
+       src: url('../06-fonts/BebasNeueBold-7B9LE.ttf');
+   }
+   @font-face {
+       font-family: montserrat;
+       src: url('../06-fonts/static/Montserrat-Regular.ttf');
+   }
+   @font-face {
+    font-family: opensansbold;
+    src: url('../06-fonts/OpenSans-ExtraBold.ttf');
+}
+   @font-face {
+    font-family: opensans;
+    src: url('../06-fonts/OpenSans-VariableFont_wdth,wght.ttf');
+    
+}
+body{
+    background-color: var(--background);
+    font-family: opensans, sans-serif;
+    overflow-x: hidden;
+}
+html{
+    overflow-x: hidden;
+}
+
+.container{
+    background-image: url(../img/backgound.png);
+    width: 100%;
+    min-height: 90vh;
+    background-position:center;
+    position: relative;
+    color: rgb(221, 221, 221);
+}
+.color{
+    width: 100%;
+    min-height: 90vh;
+    background-color: #00000073;
+    position: relative;
+}
+
+/*---------------------------header--------------------*/
+
+a{
+    text-decoration: none;
+
+}
+
+
+
+#logo{
+    color: var(--textColor);
+    font-size: 2rem;
+    font-family: opensansbold;
+    letter-spacing: -4px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 80px;
+    padding: 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background: transparent;
+    -webkit-backdrop-filter: blur(10px);
+    font-family: opensans;
+    z-index: 1000;
+
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+#menu a{
+    font-size: 17px;
+    display: block;
+    padding: .5rem;
+    color: rgb(221, 221, 221);
+    transition: 200ms;
+    position: relative;
+}
+
+#menu a:hover{
+    color: white ;
+}
+
+#btn-mobile{
+    display: none;
+}
+nav ul ul{
+    position: absolute;
+
+    line-height: 30px;
+    background-color: #212121;
+    list-style: none;
+    overflow: hidden;
+    height: 0;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    padding-top: 10px;
+    transition: 300ms;
+
+
+}
+#quemsomos:hover #dropqs{
+    height: 90px;
+}
+#culto:hover #dropculto{
+    height: 90px;
+}
+
+#menu #liContato:hover #contato{
+    border: 2px solid var(--color);
+    background-color: var(--color);
+    border-radius: 5px;
+    color: rgb(221, 221, 221);
+    font-family: opensans;
+    font-weight: bold;
+    padding: 5px 7px;
+    
+}
+#menu #liContato #contato{
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color);
+    font-weight: bold;
+    padding: 5px;
+    transition: 800ms;
+}
+
+@media (max-width: 1000px) {
+
+    #menu{
+        /*display: none;*/
+        display: block;
+        margin: auto;
+        position: absolute;
+        text-align: right;
+        width: 100%;
+        top: 80px;
+        right: 0px;
+        background-color: transparent;
+        transition: .6s;
+        height: 0px;
+        visibility: hidden;
+        z-index: 10000000000000000000;
+        overflow-y: hidden;
+        -webkit-backdrop-filter: blur(50px);
+    }
+
+    #nav.active #menu{
+        display: block;
+        height: calc(100vh - 100px);
+        visibility: visible;
+
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin:0 1rem;
+
+    }
+    #btn-mobile{
+        position: relative;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #btn-mobile span{
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: rgb(255, 255, 255);
+        border-radius: 4px;
+        transition: .5s;
+    }
+    #menu #liContato #contato{
+        border: none;
+        font-size: 17px;
+        display: block;
+        padding: .5rem;
+        color: rgb(221, 221, 221);
+        font-weight: 100;
+        padding: 0;
+    }
+    #btn-mobile span:nth-child(1){
+        transform: translateY(-15px);
+        width:25px ;
+        left: 15px;
+
+    }
+    #nav.active span:nth-child(1){
+        width: 40px;
+        transform: translateY(0px) rotate(45deg);
+        transition-delay: 0.125s;
+    }
+    #btn-mobile span:nth-child(2){
+        transform: translateY(15px);
+        width:15px ;
+        left: 15px;
+
+    }
+    #nav.active span:nth-child(2){
+        width: 40px;
+        transform: translateY(0px) rotate(315deg);
+        transition-delay: 0.25s;
+    }
+    #nav.active span:nth-child(3){
+        transform: translateX(60px);
+
+    }
+
+}
+
+.perfilContainer{
+    width: 100%;
+    height: 79vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    
+}
+.imgPerfil{
+    background-image: url(../img/perfil.jpg);
+    background-position: top;
+    background-size:cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid var(--color);
+}
+.name{
+    font-family: opensansbold;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--color);
+    text-align: center;
+}
+.desc{
+    color: rgb(221, 221, 221);
+    font-size: 20px;
+}
+.btnContainer{
+    margin-top: 15px;
+}
+.btnContainer button{
+    padding: 13px 25px;
+    font-size: 30px;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    background-color: #25252541;
+    color: var(--color);
+    transition: 300ms;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+.btnContainer button:hover{
+    padding: 13px 30px;
+    background-color: #00000073;
+}
+.btnContainer img{
+    width: 30px;
+}
+.btnContainer h5{
+    padding: 0 10px;
+}
+
+
+
+.section{
+    padding: 40px 200px;
+    display: block;
+}
+.sec1{
+    display: flex;
+    justify-content: space-around;
+}
+.esquerdo{
+    width: 40%;
+    display: inline-block;
+}
+.title{
+    position: relative;
+}
+
+.titleH2 span{
+    background-color: var(--color);
+    width: 30%;
+    height: 5px;
+    left: 0;
+    bottom: -10px;
+    border-radius: 5px;
+    position: absolute;
+}
+.title h2{
+    color: var(--textColor);
+    font-size: 50px;
+    font-family: opensansbold;
+    letter-spacing: -2px;
+    margin-bottom: 40px;
+}
+.imgSec1{
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 450px;
+    margin-top: 15px;
+
+    
+}
+
+.direita{
+    width: 55%;
+    display: inline-block;
+}
+
+.sobre{
+    color: var(--textColor);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+.number{
+    display: flex;
+
+    position: absolute;
+    right: 0;
+    
+}
+.number h5{
+    font-size: 60px;
+    color: #707070;
+    display: inline-block;
+    position: relative;
+}
+.number span{
+    background-color: var(--color);
+    position: relative;
+    width: 50px;
+    height: 5px;
+    border-radius: 2px 0px 0px 2px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+@media (max-width: 1400px) {
+    .section{
+        padding: 20px 40px;
+    }
+}
+@media (max-width: 850px){
+    .number h5{
+        font-size: 40px;
+    }
+    .number span{
+        width: 20px;
+    }
+    .esquerdo{
+        display: none;
+    }
+    .direita{
+        float: unset;
+        width: 100%;
+    }
+    .title{
+        line-height: 50px;
+    }
+    .title span{
+        width: 60%;
+    }
+    .skillsContainer{
+        flex-direction: column;
+    }
+    .frontend{
+        width: 100% !important;
+    }
+    .backend{
+        width: 100% !important;
+    }
+    #cardImg {
+        display: flex;
+        flex-direction: column !important;
+        margin: 10px;
+    }
+    #textContanierCard {
+        margin: 10px !important ;
+    }
+}
+
+@media (max-width: 400px){
+    .cardContainer{
+
+        grid-template-areas:
+        "1 2"
+        "3 4"
+        "5 6" 
+        !important;
+        
+        
+    }
+    .cardTextImg{
+        display: none  !important;
+    }
+    #cardTitle{
+        font-size: 40px !important;
+    }
+
+
+}
+
+.sec2{
+    display: block;
+    background-color: #292929;
+    bottom: 0;
+}
+#spanSec2{
+    width: 10%;
+}
+
+.skillsContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.frontend{
+    width: 30%;
+}
+.backend{
+    width: 30%;
+}
+.subtitle{
+    color: var(--textColor);
+    font-size: 55px;
+    font-family: opensansbold;
+}
+.strongBlue{
+    color: var(--color);
+    font-size: 60px;
+    font-family: opensansbold;
+}
+
+
+
+
+
+.cardContainer{
+    margin-top: 15px;
+    display: grid;
+    grid-template-areas:
+    "1 2 3"
+    "4 5 6" 
+    ;
+    gap: 15px;
+    
+}
+.cardContainer .card{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1) ;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    
+
+    background-color: rgba(175, 175, 175, 0.918);
+    color: var(--color);
+    transition: 500ms;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 105px;
+
+
+    
+
+
+
+}
+.cardContainer .card:hover{
+
+    box-shadow: 0 0 30px black;
+    background-color: rgb(221, 221, 221);
+
+
+}
+.cardContainer .card img{
+    width: 105px;
+    padding: 10px;
+}
+.cardContainer h5{
+    padding: 0 10px;
+}
+
+.descriptionSkills{
+    box-shadow: 0 0 10px black;
+    color: rgb(221, 221, 221);
+    border-radius: 10px;
+}
+.cc2{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.cc2 .card {
+    margin: 15px;
+    width: 120px;
+    height: 120px;
+
+}
+.cc2 .card img{
+    width: 140px;
+    padding: 20px;
+}
+.cc2 span{
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--color);
+
+    
+}
+.cc2 .span1{
+    transform:rotate(45deg);
+}
+.cc2 .span2{
+    transform: rotate(135deg);
+}
+#cardTitle{
+    font-size: 30px;
+    font-family: opensansbold;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.none{
+    display: none;
+}
+
+
+#spanSec3{
+    width: 200px;
+}
+
+.projectContainer{
+    display: flex;
+
+}
+.projectCard{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+
+    margin: 30px 0;
+    color: rgb(221, 221, 221);
+    position: relative;
+    box-shadow: -10px 10px 40px black;
+    border-radius: 5px;
+    transition: 300ms;
+}
+.projectCard:hover{
+    box-shadow: -10px 10px 60px black;
+}
+
+.projectCard .img{
+    background-image: url(../img//backgound.png);
+    background-position: center;
+    background-size:cover;
+    width: 40%;
+    height: 300px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+
+}
+.projectDescriptionContainer{
+    width: 55%;
+}
+.projectDescriptionContainer .projectTile{
+    font-size: 50px;
+}
+
+
+.projectCard .span{
+    position: absolute;
+    background-color: var(--color);
+    border-radius: 5px;
+    transition: 300ms;
+}
+.projectCard .span1{
+    width: 60px;
+    height: 4px;
+    top: 0;
+    right: 0;
+}
+.projectCard .span2{
+    width: 4px;
+    height: 60px;
+    top: 0;
+    right: 0;
+}
+.projectCard .span3{
+    width: 60px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+}
+.projectCard .span4{
+    width: 4px;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+}
+
+
+.projectCard .img .backgroundSpan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    background-color: #90e3e600;
+    z-index: 1000;
+    border-radius: 2px;
+    
+    
+}
+
+.backSpan1{
+    background-color: #90e3e656;
+    transition: 500ms;
+}
+.backSpan2{
+    background-color: #90e3e698;
+    transition: 800ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectCard:hover .span1{
+    width: 70px;
+}
+.projectCard:hover .span2{
+    height: 70px;
+}
+.projectCard:hover .span3{
+    width: 70px;
+}
+.projectCard:hover .span4{
+    height: 70px;
+}
+
+.projectCard .img:hover .backgroundSpan{
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+    
+}
+.btnContainer .btnVisit{
+    border-radius: 50%;
+    border: 2px solid rgb(221, 221, 221);
+    padding: 0;
+    padding: 60px;
+
+}
+.btnContainer .btnVisit img{
+    width: 70px;
+    height: 70px;
+
+}
+.btnContainer .btnVisit:hover{
+    padding: 0;
+    padding: 50px;
+
+}
+.projectCard .img:hover .btnVisit{
+    border: 2px solid rgb(221, 221, 221);
+}
+.aviso{
+    color: rgb(221, 221, 221);
+}
+.projectCard .projectDescriptionContainer{
+
+    font-size: 18px;
+}
+
+@media (max-width: 800px) {
+    .projectCard{
+        flex-direction: column-reverse;
+        
+    }
+    .projectCard .img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .projectCard .projectDescriptionContainer{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .sec3{
+        padding: 10px;
+    }
+}
+.sec4{
+
+    background-image: url(../img/pexels-daniel-frank-287229.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+
+}
+.color2{
+    padding: 40px 200px;
+
+}
+.formContainerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.formContainer{
+
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1) ;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+
+
+    border-radius: 5px;
+    
+
+    background-color: rgba(175, 175, 175, 0.082);
+    transition: 500ms;
+
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 65%;
+
+    padding: 30px;
+}
+.formDescription{
+    width: 47%;
+    position: relative;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+input, textarea, .formBtn{
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px 0;
+    position: relative;
+}
+
+input, textarea{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    margin: 10px 0;
+    font-family: opensans;
+
+
+}
+textarea{
+    max-width: 100%;
+    padding: 20px 0;
+}
+.inputContainer{
+    position: relative;
+
+}
+.spanInput{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color);
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+}
+.inputContainer .labelForm{
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+}
+.inputForm{
+    transition: 300ms;
+    color: rgb(221, 221, 221);
+}
+.inputForm:focus{
+    padding:5px 10px;
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 0; 
+}
+.textarea:focus{
+    max-width: 100%;
+    padding: 20px 10px;
+}
+.inputForm::placeholder{
+    color: rgb(221, 221, 221);
+}
+
+.btnForm button{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.btnForm button img{
+    width: 25px;
+    height: 30px;
+}
+.titleContact{
+    text-align: center;
+
+}
+.titleContact span{
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media (max-width: 1400px) {
+    .color2{
+        padding: 20px 40px ;
+    }
+    .formContainerContainer{
+        width: 100%;
+    }
+    .formContainer{
+        width: 100%;
+        flex-direction: column;
+    }
+    form, .formDescription{
+        width: 100%;
+    }
+    .formDescription{
+        margin-bottom: 20px;
+    }
+    .container{
+        min-height: 90vh;
+    }
+    .sec4{
+        min-height: 90vh;
+    }
+} 
+
+@media(max-width: 400px) {
+    .color2{
+        padding: 20px 10px;
+    }
+}
+    
+
+
+

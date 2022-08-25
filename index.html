@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portifólio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="color">
+
+
+            <header id="header">
+                <a href="#" id="logo"><h2><strong class="strongBlue">Porti</strong>fólio</h2></a>
+                <nav id="nav">
+                    <div id="btn-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="menu">
+                        <li><a href="#sobre">Sobre mim</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li id="liContato"><a id="contato" href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            
+            <div class="perfilContainer">
+                <div class="imgPerfil"></div>                
+                <h1 class="name">Lucas Queiroz</h1>
+                <h3 class="desc">I'm FullStack Developer</h3>
+                <div class="btnContainer">
+                    <button><h5>Github</h5> <img src="../icons/github.png" alt="githubicon"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section sec1">
+
+        <div class="number">
+            <h5>01</h5>
+            <span></span>
+        </div>
+
+        <div class="esquerdo">
+            <div class="imgPerfil imgSec1"></div>
+        </div>
+
+        <div class="direita">
+
+            <div class="title">
+                <h2 class="titleH2">ABOUT ME<span></span></h2>
+            </div>
+
+            <div class="infoContainer">
+                <p class="sobre">
+                    Olá! Meu nome é Lucas Queiroz, tenho 17 anos e sou um desenvolvedor FullStack,
+                    estou sempre estudando as tecnologías mais modernas do mercado, amo desenvolver
+                    sites e aplicativos. Moro em Jundiaí, São paulo. Estou iniciando em programação.
+                    Tenho algumas esperiências proficionais com freelance na área.
+                </p>
+                <div class="btnContainer">
+                    <button><h5>LinkedIn</h5> <img src="../icons/linkedin.png" alt="linkedinicon"></button>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="section sec2">
+
+        <div class="number">
+            <h5>02</h5>
+            <span></span>
+        </div>
+
+        <div class="title">
+            <h2 class="titleH2">SKILLS<span id="spanSec2"></span></h2>
+        </div>
+
+        <div class="skillsContainer">
+
+
+            <div class="frontend">
+
+                <h3 class="subtitle">Front End<strong class="strongBlue">{</strong></h3>
+                    <div class="cardContainer">
+                        <div  onclick="skill(this)" class="card 1"><p style = "display: none;">HTML</p><p style="display: none;">HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.</p><img src="../icons/HTML.png" alt=""></div>
+                        <div  onclick="skill(this)" class="card 2"><p style = "display: none;">CSS</p><p style="display: none;">Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web, por exêmplo, adicionar cores, formatos, tamanho dos elementos, fontes e etc.  Também é possível, adicionar no HTML um link para um arquivo CSS que contém os estilos.</p><img src="../icons/CSS.png" alt=""></div>
+                        <div  onclick="skill(this)" class="card 3"><p style = "display: none;">JavaScript</p><p style="display: none;">JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.</p><img src="../icons/JS.png" alt=""></div>
+                        
+                        <div  onclick="skill(this)" class="card 4"><p style = "display: none;">JQuery</p><p style="display: none;">jQuery é uma biblioteca livre que contém funções da linguagem de programação JavaScript que interage com páginas em HTML, desenvolvida para simplificar os scripts executados/interpretados no navegador de internet do usuário.</p><img src="../icons/jquery.png" alt=""></div>
+                        <div  onclick="skill(this)" class="card 5"><p style = "display: none;">React Js</p><p style="display: none;">O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. É utilizado nos sites da Netflix, Imgur, Feedly, Airbnb, SeatGeek, HelloSign, Walmart e outros.</p><img src="../icons/reactJs.png" alt=""></div>
+                        <div  onclick="skill(this)" class="card 6"><p style = "display: none;">Bootstrap</p><p style="display: none;">Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.</p><img src="../icons/bootstrap.png" alt=""></div>
+                    </div>
+                <p><strong class="strongBlue">}</strong></p>
+
+            </div>
+
+            <div class="backend">
+
+                <h3 class="subtitle">Back End<strong class="strongBlue keys">{</strong></h3>
+                    <div class="cardContainer">
+                        <div onclick="skill(this)" class="card 1"><p style = "display: none;">Node Js</p><p style="display: none;">Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript do lado do servidor, isso é, fora de um navegador web.</p><img src="../icons//node.png" alt=""></div>
+                        <div onclick="skill(this)" class="card 2"><p style = "display: none;">MongoDB</p><p style="display: none;">MongoDB é um software de banco de dados orientado a documentos livre, de código aberto e multiplataforma, escrito na linguagem C++. Classificado como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas</p><img src="../icons/mongo.png" alt=""></div>
+                        <div onclick="skill(this)" class="card 3"><p style = "display: none;">Firebase</p><p style="display: none;">Firebase é uma plataforma desenvolvida pelo Google para a criação de aplicativos móveis e da web. Era originalmente uma empresa independente fundada em 2011. Em 2014, o Google adquiriu a plataforma e agora é sua oferta principal para o desenvolvimento de aplicativos.</p><img src="../icons/firebase.png" alt=""></div>
+                    </div>
+                <p><strong class="strongBlue keys">}</strong></p>
+
+            </div>
+
+
+        </div>
+
+        <div class="descriptionSkills">
+            <div id="cardImg" class="cardContainer cc2">
+
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="section sec3">
+        <div class="number">
+            <h5>03</h5>
+            <span></span>
+        </div>
+
+        <div class="title">
+            <h2 class="titleH2">PROJECTS<span id="spanSec3"></span></h2>
+        </div>
+        <p class="aviso">*Posicione o ponteiro do mouse sobre a imagem para visitar o projeto</p>
+
+
+
+        
+
+        <div class="projectsContainer">
+            <div class="projectCard">
+                <div class="img"><span class="backgroundSpan backSpan1"></span><span class="backgroundSpan backSpan2">
+                    <div class="btnContainer">
+                        <button class="btnVisit"><img src="../icons/visit.png" alt="linkedinicon"></button>
+                    </div>
+                </span></div>
+                <div class="projectDescriptionContainer">
+                    <div class="title">
+                        <h2 class="titleH2 projectTile">Titulo<span id="spanSec2"></span></h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit quibusdam perspiciatis voluptate dolores blanditiis officiis aperiam magni id eveniet facilis quasi porro, consequuntur voluptatibus eos iure sapiente deserunt quos earum!</p>
+                </div>
+                <span class="span span1"></span><span class="span span2"></span><span class="span span3"></span><span class="span span4"></span>
+            </div>
+
+
+
+            <div class="projectsContainer">
+                <div class="projectCard">
+                    <div class="img"><span class="backgroundSpan backSpan1"></span><span class="backgroundSpan backSpan2">
+                        <div class="btnContainer">
+                            <button class="btnVisit"><img src="../icons/visit.png" alt="linkedinicon"></button>
+                        </div>
+                    </span></div>
+                    <div class="projectDescriptionContainer">
+                        <div class="title">
+                            <h2 class="titleH2 projectTile">Titulo<span id="spanSec2"></span></h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit quibusdam perspiciatis voluptate dolores blanditiis officiis aperiam magni id eveniet facilis quasi porro, consequuntur voluptatibus eos iure sapiente deserunt quos earum!</p>
+                    </div>
+                    <span class="span span1"></span><span class="span span2"></span><span class="span span3"></span><span class="span span4"></span>
+                </div>
+    
+
+
+            </div>
+        </div>          
+    </div>
+
+    
+    <div class="container sec4">
+        <div class="color color2">
+
+
+
+
+
+            <div class="title">
+                <h2 class="titleH2 titleContact">CONTACT ME<span id="spanSec3"></span></h2>
+            </div>
+
+            <div class="formContainerContainer">
+                <div class="formContainer">
+                    <div class="formDescription">
+                        <div class="title">
+                            <h2 class="titleH2 projectTile">Form<span id="spanSec2"></span></h2>
+                        </div>
+                        <p>Lorem ipsum dolor aperiam vitae quasi quaeris molestiae qui dicta velit quis dolore odit animi quod, consequatur, aut, unde accusamus. lorem</p>
+                    </div>
+                    
+                    
+
+
+
+                    <form action="">
+                        <div class="inputContainer">
+                            <input class="inputForm" type="text" required placeholder="Nome...">
+                            <span class="spanInput"></span>
+                        </div>
+                        <div class="inputContainer">
+                            <input class="inputForm" type="text" required placeholder="Email...">
+                            <span class="spanInput"></span>
+                        </div>
+                        <div class="inputContainer">
+                            <textarea class="inputForm textarea" type="text" placeholder="Mensagem..."></textarea>
+                            <span class="spanInput"></span>
+                        </div>
+
+                        <div class="btnContainer btnForm">
+                            <button><h5>Enviar</h5> <img src="../icons/submit.png" alt="icon"></button>
+                        </div>
+                        
+                    </form>
+
+                    
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <div class="section">
+
+    </div>
+
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
